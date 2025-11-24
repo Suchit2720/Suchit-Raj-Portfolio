@@ -1,0 +1,38 @@
+/* Basically i desined in a way to fade in from 0px to 20px , it fast and not slow but still can obsever the animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* same as fade but slides */
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* with these two i applied in different sections and this arrangemnt fits the best */
+body {
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1, h2, h3 {
+  animation: slideIn 1s ease-out;
+}
+
+a, nav ul li a, a[href="index.html"] {
+  transition: all 0.5s ease;
+}
+
+.Mini-Box {
+  transition: 0.3s ease;
+}
+
+
+@keyframes mandala-spin {
+  from {
+    transform: translateX(110px) rotate(0deg);
+  }
+  to {
+    transform: translateX(110px) rotate(360deg);
+  }
+}

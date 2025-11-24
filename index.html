@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Suchit Raj Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="name">SUCHIT RAJ</div>
+        <div class="profile-image">
+        <img src="Images/profile.png" alt="Profile Picture">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="Certifications.html">Certifications</a></li>
+                <li><a href="contacts.html">Links & Contact</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+            </ul>
+        </nav>
+        <div class="contact-links">
+            <a href="https://www.facebook.com/profile.php?id=100009181891033">Facebook</a>           
+            <a href="https://www.instagram.com/suchit2753/?next=%2F">Instagram</a>
+            <a href="https://www.linkedin.com/in/suchit-raj-62a6941b9/">LinkedIn</a>
+        </div>
+    </div>
+
+    <!-- when i started to change my layout to sidebar website my whole information was messed up so i had to wrap it under
+     some class -->
+    <div class="main-content">
+        <h1>SUCHIT RAJ PORTFOLIO</h1>
+        <h2 class="Welcome">Welcome to my portfolio!</h2>
+        <p>Explore my journey into tech, AI, and cloud innovation. 
+            Navigate through my projects and connect with me through the links on the left.</p>
+
+
+
+
+        <h2>Projects (Please Click!) </h2>  
+            <div class="Project-box" id="fridgemate-card">
+                <div class="inside-Box">
+                    <img src="Images/fridgemate copy.png" alt="fridgemate project">
+                    <h3>Fridgemate app</h3>
+                    <p>Learning this course presently to know all the services in AWS</p>
+                </div>
+            </div>
+        
+        <!-- Project Details Modal -->
+        <div id="fridgemate-modal" class="project-modal">
+            <div class="project-modal-content">
+                <button class="project-modal-close" aria-label="Close project details">&times;</button>
+
+                <h2>Fridgemate App</h2>
+                <p>
+                Fridgemate is a smart fridge companion app that helps you track groceries,
+                reduce food waste, and plan meals. Users can add items, set expiry dates,
+                and get reminders before food goes bad.
+                </p>
+
+                <ul class="project-modal-list">
+                <li><strong>Tech stack:</strong> React Native, Expo, Firebase</li>
+                <li><strong>Features:</strong> Item tracking, expiry reminders, simple UI</li>
+                <li><strong>Role:</strong> Front-end + project design</li>
+                </ul>
+
+                <a class="project-modal-link"
+                href="https://github.com/Suchit2720/Fridgemate" 
+                target="_blank">
+                🔗 View project on GitHub
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <script>
+            // Open modal when clicking the project card
+            const projectCard = document.getElementById('fridgemate-card');
+            const projectModal = document.getElementById('fridgemate-modal');
+            const modalClose = projectModal.querySelector('.project-modal-close');
+
+            projectCard.addEventListener('click', () => {
+                projectModal.style.display = 'block';
+            });
+
+            // Close modal when clicking the X button
+            modalClose.addEventListener('click', () => {
+                projectModal.style.display = 'none';
+            });
+
+            // Close modal when clicking outside the brown modal box
+            window.addEventListener('click', (event) => {
+                if (event.target === projectModal) {
+                    projectModal.style.display = 'none';
+                }
+            });
+    </script>
+</body>
+</html>
