@@ -40,13 +40,21 @@
 
 
         <h2>Projects (Please Click!) </h2>  
-            <div class="Project-box" id="fridgemate-card">
-                <div class="inside-Box">
-                    <img src="Images/fridgemate copy.png" alt="fridgemate project">
-                    <h3>Fridgemate app</h3>
-                    <p>Learning this course presently to know all the services in AWS</p>
-                </div>
+
+        <div class="Project-box">
+
+            <div class="inside-Box" id="fridgemate-card">
+                <img src="Images/fridgemate copy.png" alt="Fridgemate">
+                <h3>Fridgemate app</h3>
             </div>
+
+            <div class="inside-Box" id="churn-card">
+                <img src="Images/card2.png" alt="Customer Churn">
+                <h3>Customer Churn Analysis & Loan Decision Dashboard</h3>
+            </div>
+
+        </div>  
+
         
         <!-- Project Details Modal -->
         <div id="fridgemate-modal" class="project-modal">
@@ -61,9 +69,9 @@
                 </p>
 
                 <ul class="project-modal-list">
-                <li><strong>Tech stack:</strong> React Native, Expo, Firebase</li>
-                <li><strong>Features:</strong> Item tracking, expiry reminders, simple UI</li>
-                <li><strong>Role:</strong> Front-end + project design</li>
+                    <li><strong>Tech stack:</strong> React Native, Expo, Firebase</li>
+                    <li><strong>Features:</strong> Item tracking, expiry reminders, simple UI</li>
+                    <li><strong>Role:</strong> Front-end + project design</li>
                 </ul>
 
                 <a class="project-modal-link"
@@ -74,9 +82,31 @@
             </div>
         </div>
 
+        <div id="churn-dashboard-modal" class="project-modal">
+            <div class="project-modal-content">
+                <button class="project-modal-close" aria-label="Close project details">&times;</button>
 
+                <h2>Customer Churn Analytics Dashboard</h2>
+                <p>
+                An interactive data analytics dashboard built to analyze customer churn patterns
+                and simulate credit risk decisions using machine learning.
+                </p>
 
+                <ul class="project-modal-list">
+                    <li><strong>Tech stack:</strong> Python, Streamlit, Pandas, Scikit-Learn</li>
+                    <li><strong>Features:</strong> Churn prediction, KPIs, filters, visual analytics</li>
+                    <li><strong>Role:</strong> Data analysis + ML model development</li>
+               </ul>
 
+                <a class="project-modal-link"
+                href="https://github.com/Suchit2720/customer-churn-analytics-dashboard" 
+                target="_blank">
+                🔗 View project on GitHub
+                </a>
+            </div>
+
+        </div>
+        
 
     </div>
 
@@ -102,5 +132,26 @@
                 }
             });
     </script>
+
+    <script>
+            // ---- CHURN DASHBOARD MODAL ----
+            const churnCard = document.getElementById('churn-dashboard-card');
+            const churnModal = document.getElementById('churn-dashboard-modal');
+            const churnClose = churnModal.querySelector('.project-modal-close');
+
+            churnCard.addEventListener('click', () => {
+                churnModal.style.display = 'block';
+            });
+
+            churnClose.addEventListener('click', () => {
+                churnModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === churnModal) {
+                    churnModal.style.display = 'none';
+                }
+            });
+</script>
 </body>
 </html>
